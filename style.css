@@ -1,0 +1,38 @@
+ul li{
+    position: relative;
+    /* margin: 20px; */
+    padding-left: 30px !important ;
+    list-style: none;
+    margin: 20px;
+    position: relative;
+    align-items: center;
+}
+ul li::before{
+    content: '';
+    width: 28px;
+    height: 28px;
+    background-image: url(./images/unchecked.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 1px;
+    margin-bottom: 20px;
+    left: 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+ul li.checked{
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(./images/checked.png);
+}
+ul li span {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
